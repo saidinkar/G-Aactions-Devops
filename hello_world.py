@@ -1,2 +1,1 @@
-def hello(name="world"):
-  print("hello "+name+"!")
+print("Hello, World!")
