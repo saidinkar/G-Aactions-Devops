@@ -13,8 +13,10 @@ jobs:
     - name: Check-out devops repository
       uses: actions/checkout@v2
       with:
-        repository: saidinkar/G-Aactions-Devops
+        repository: jcdan3/devops
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: ${{ env.DEVOPS_DIR }}
 
     - name: Hello World
-      run: python h_world.py
+      run: python ${{ env.DEVOPS_DIR }}/hello_world.py
       shell: sh
